@@ -42,14 +42,9 @@ Node* insertAtPosition(Node* head, int value, int k) {
     return head;
 }
 
-Node* createNode(int value) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
-    if (newNode) {
-        setValue(newNode, value); // استخدام setValue بدلًا من الوصول المباشر
-        setNext(newNode, NULL);   // استخدام setNext بدلًا من الوصول المباشر
-    }
-    return newNode;
-}
+Node* createNode(int value) ;
+
+
 
 
 int main(){
@@ -75,3 +70,15 @@ Node* head = NULL;
     printf("NULL\n");
 
 return 0;}
+
+
+
+
+Node* createNode(int value) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (newNode) {
+        setValue(newNode, value); 
+        setNext(newNode, NULL);   
+    }
+    return newNode;
+}
